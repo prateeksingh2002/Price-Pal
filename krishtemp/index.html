@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PricePal</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./swiper.css">
+    <link rel="stylesheet" href="./media-queries.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/172e7f156d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="sidebar-btn">
+        <span class="fas fa-bars"></span>
+    </div>
+
+    <section class="sidebar">
+        <div class="text">Categories</div>
+        <ul>
+            <li><a href="#" class="elec">Electronics
+                <span class="fas fa-caret-down first"></span>
+            </a>
+                <ul class="elec-show sub-items">
+                    <li><a href="#">Computer</a></li>
+                    <li><a href="#">TV</a></li>
+                    <li><a href="#">Audio</a></li>
+                    <li><a href="#">Smartphone</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="furni">Furniture
+                <span class="fas fa-caret-down second"></span>
+            </a>
+                <ul class=" furni-show sub-items">
+                    <li><a href="#">Table</a></li>
+                    <li><a href="#">Chair</a></li>
+                    <li><a href="#">Sofa</a></li>
+                    <li><a href="#">Bed</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="stationary">Stationary
+                <span class="fas fa-caret-down third"></span>
+            </a>
+                <ul class="stationary-show sub-items">
+                    <li><a href="#">Pen</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#" class="home-decor">Home Decor
+                <span class="fas fa-caret-down fourth"></span>
+            </a>
+                <ul class="home-decor-show sub-items">
+                    <li><a href="#">Bedsheet</a></li>
+                    <li><a href="#">Curtains</a></li>
+                    <li><a href="#">Wall Hangings</a></li>
+                    <li><a href="#">Lightings</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="fashion">Fashion
+                <span class="fas fa-caret-down fifth"></span>
+            </a>
+                <ul class="fashion-show sub-items">
+                    <li><a href="#">Men's</a></li>
+                    <li><a href="#">Women's</a></li>
+                    <li><a href="#">Kids</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+
+    
+    <header class="header">
+        <a href="#" class="logo"><img src="./WhatsApp Image 2023-09-26 at 1.32.03 PM.jpeg" alt="" class="logoimage"></a>
+        <div class="box">
+            <input type="text" placeholder="Search here..."  class="input" id="search-item">
+            
+                <i class="fa-solid fa-magnifying-glass" id = "search-icon"></i>
+            
+        </div>
+        <nav class="navbar">
+            <a href="#" class="line"><i class="fa-solid fa-house"></i></a>
+            <a href="#" class="line"><i class="fa-solid fa-user" onclick="toggleMenu()"></i></a>
+            <!-- <a href="#" class="line">Sign in</a>
+            <a href="#" class="line">Sign up</a> -->
+            
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <i class="fa-solid fa-circle-user"></i><p>Krish Prasad</p>
+                    </div>
+                    <hr>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p>My Wishlist</p>
+                    <span>></span></a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Notifications</p>
+                    <span>></span></a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-users"></i>
+                        <p>Users Forum</p>
+                    <span>></span></a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-question"></i>
+                        <p>Help & Support</p>
+                    <span>></span></a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Settings</p>
+                    <span>></span></a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <p>Logout</p>
+                    <span>></span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- <div class="website-list">
+        <a href="#" class="amazon"><img src="./img/amazon.jpg" alt=""></a>
+        <a href="#"><img src="./img/flipkart.png" alt=""></a>
+        <a href="#"><img src="./img/Nykaa.png" alt=""></a>
+        <a href="#"><img src="./img/myntra.webp" alt=""></a>
+    </div> -->
+
+
+    <div class="container swiper-container">
+        <div class="slide-content">
+            <h1 style="margin-left: 30px; margin:10px;">Hot Deals on Electronics</h1>
+
+            <div class="swiper-wrapper" id="prod-list1">
+              
+            </div>
+            <h1 style="margin-left: 30px;">New Sale on Furniture</h1>
+           
+            <div class="swiper-wrapper" id="prod-list2">
+              
+            </div>
+            <h1 style="margin-left: 30px;">Back to School Stationary</h1>
+
+            <div class="swiper-wrapper" id="prod-list3">
+              
+            </div>
+            <h1 style="margin-left: 30px;">Trending in Home Decor</h1>  
+
+            <div class="swiper-wrapper" id="prod-list4">
+              
+            </div>
+            <!-- <h1 style="margin-left: 30px;">Furniture</h1>
+
+            <div class="swiper-wrapper" id="prod-list5">
+              
+            </div> -->
+            
+        </div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination"></div> -->
+        
+
+       
+
+        <!-- <h1>Testimonials</h1>
+        <div class="cont testimonial">
+            <div class="testimonial-card">
+                <h2>Krish Prasad</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore debitis accusamus molestiae, fugiat corrupti laboriosam eligendi voluptatibus. Cum repellendus, sit esse possimus quos facere architecto eaque excepturi explicabo. Eius, eum?</p>
+            </div>
+            <div class="testimonial-card">
+                <h2>Nishchint Kamath</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore debitis accusamus molestiae, fugiat corrupti laboriosam eligendi voluptatibus. Cum repellendus, sit esse possimus quos facere architecto eaque excepturi explicabo. Eius, eum?</p>
+            </div>
+            <div class="testimonial-card">
+                <h2>Neil Dedhia</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore debitis accusamus molestiae, fugiat corrupti laboriosam eligendi voluptatibus. Cum repellendus, sit esse possimus quos facere architecto eaque excepturi explicabo. Eius, eum?</p>
+            </div>
+            <div class="testimonial-card">
+                <h2>Prateek Singh</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore debitis accusamus molestiae, fugiat corrupti laboriosam eligendi voluptatibus. Cum repellendus, sit esse possimus quos facere architecto eaque excepturi explicabo. Eius, eum?</p>
+            </div>
+        </div>
+
+        <section class="sub-footer">
+            <div class="flex subfooter-container">
+                <a href="#" class="hover-links">Privacy policy</a>
+                <a href="#" class="hover-links">Terms & Conditions</a>
+                <a href="#" class="hover-links">Security information</a>
+                <a href="#" class="hover-links"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover-links"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover-links"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover-links"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </section> -->
+
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div> -->
+
+      
+    </div>
+
+    <script src="./swiper.js"></script>
+    <script src="./script.js"></script>
+    <script src="./mainscript.js"></script>
+</body>
+</html>

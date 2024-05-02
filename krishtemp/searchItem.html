@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PricePal</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./swiper.css">
+    <script src="https://kit.fontawesome.com/172e7f156d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"><img src="./WhatsApp Image 2023-09-26 at 1.32.03 PM.jpeg" alt="" class="logoimage"></a>
+        <div class="box">
+            <input type="text" placeholder="Search here..."  class="input"   id="search-item1">
+            
+                <i class="fa-solid fa-magnifying-glass" id="search-icon1"></i>
+            
+        </div>
+        <nav class="navbar">
+            <a href="#" class="line"><i class="fa-solid fa-house"></i></a>
+            <a href="#" class="line"><i class="fa-solid fa-user" onclick="toggleMenu()"></i></a>
+            <!-- <a href="#" class="line">Sign in</a>
+            <a href="#" class="line">Sign up</a> -->
+            
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <i class="fa-solid fa-circle-user"></i><p>Krish Prasad</p>
+                    </div>
+                    <hr>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p>My Wishlist</p>
+                    <span>></span></a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Notifications</p>
+                    <span>></span></a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-users"></i>
+                        <p>Users Forum</p>
+                    <span>></span></a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-question"></i>
+                        <p>Help & Support</p>
+                    <span>></span></a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Settings</p>
+                    <span>></span></a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <p>Logout</p>
+                    <span>></span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+   
+
+    <div class="container swiper-container">
+        <div class="slide-content">
+            <h1 style="margin-left: 30px;"  id="Product_category"></h1>
+
+            <div class="swiper-wrapper1" id="category_results">
+              
+            </div>
+            
+            
+        </div>
+        
+
+      
+    </div>
+
+    <script src="./swiper.js"></script>
+    <!-- <script src="./script.js"></script> -->
+    <!-- <script src="./mainscript.js"></script> -->
+    <script src="./mainscript2.js"></script>
+</body>
+</html>
